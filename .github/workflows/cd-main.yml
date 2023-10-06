@@ -1,15 +1,15 @@
 ---
-name: cd-dev
+name: cd-main
 on:
   pull_request_target:
     types:
       - closed
     branches:    
-      - dev
+      - main
 
 jobs:
   cd-dev-Explore-GitHub-Actions:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
-      - run: echo "deploy to dev because of merge to dev branch"
+      - run: echo "deploy to main because of merge to main branch"
